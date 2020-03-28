@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA026C0C-6360-4B75-884A-8C235C647297}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChocoNET</RootNamespace>
+    <AssemblyName>ChocoNET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CLITools">
+      <HintPath>D:\source\repos\CLITools\CLITools\bin\Debug\CLITools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Choco.cs" />
+    <Compile Include="Commands\SourceCommand.cs" />
+    <Compile Include="Commands\OptimizeCommand.cs" />
+    <Compile Include="Commands\SyncCommand.cs" />
+    <Compile Include="Commands\SynchronizeCommand.cs" />
+    <Compile Include="Commands\DownloadCommand.cs" />
+    <Compile Include="Commands\SupportCommand.cs" />
+    <Compile Include="Commands\UpdateCommand.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Debug.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ReducePackageSize.cs" />
+    <Compile Include="Commands\Upgrade\Switches\DeflateNupkgOnly.cs" />
+    <Compile Include="Commands\Upgrade\Switches\IgnoreDependencies.cs" />
+    <Compile Include="Commands\Upgrade\Switches\AllowEmptyChecksumsSecure.cs" />
+    <Compile Include="Commands\Upgrade\Switches\RequireChecksums.cs" />
+    <Compile Include="Commands\Upgrade\Switches\InstallArguments.cs" />
+    <Compile Include="Commands\Upgrade\Switches\AllowMultipleVersions.cs" />
+    <Compile Include="Commands\Upgrade\Switches\SkipDownloadCache.cs" />
+    <Compile Include="Commands\Upgrade\Switches\SkipVirusCheck.cs" />
+    <Compile Include="Commands\Upgrade\Switches\IgnoreChecksums.cs" />
+    <Compile Include="Commands\Upgrade\Switches\OverrideArguments.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ApplyPackageParametersToDependencies.cs" />
+    <Compile Include="Commands\Upgrade\Switches\AllowDowngrade.cs" />
+    <Compile Include="Commands\Upgrade\Switches\UseRememberedArguments.cs" />
+    <Compile Include="Commands\Upgrade\Switches\CertPassword.cs" />
+    <Compile Include="Commands\Upgrade\Switches\UseSystemPowerShell.cs" />
+    <Compile Include="Commands\Upgrade\Switches\VirusCheck.cs" />
+    <Compile Include="Commands\Upgrade\Switches\VirusPositivesMinimum.cs" />
+    <Compile Include="Commands\Upgrade\Switches\CacheLocation.cs" />
+    <Compile Include="Commands\Upgrade\Switches\PackageParametersSensitive.cs" />
+    <Compile Include="Commands\Upgrade\Switches\AllowUnofficialBuild.cs" />
+    <Compile Include="Commands\Upgrade\Switches\FailOnErrorOutput.cs" />
+    <Compile Include="Commands\Upgrade\Switches\AllowEmptyChecksums.cs" />
+    <Compile Include="Commands\Upgrade\Switches\NotSilent.cs" />
+    <Compile Include="Commands\Upgrade\Switches\IgnorePackageExitCodes.cs" />
+    <Compile Include="Commands\Upgrade\Switches\User.cs" />
+    <Compile Include="Commands\Upgrade\Switches\IgnoreUnfound.cs" />
+    <Compile Include="Commands\Upgrade\Switches\PackageParameters.cs" />
+    <Compile Include="Commands\Upgrade\Switches\SkipPowerShell.cs" />
+    <Compile Include="Commands\Upgrade\Switches\DownloadChecksumTypeX64.cs" />
+    <Compile Include="Commands\Upgrade\Switches\DownloadChecksumType.cs" />
+    <Compile Include="Commands\Upgrade\Switches\FailOnNotInstalled.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ApplyInstallArgumentsToDependencies.cs" />
+    <Compile Include="Commands\Upgrade\Switches\UseDownloadCache.cs" />
+    <Compile Include="Commands\Upgrade\Switches\StopOnFirstPackageFailure.cs" />
+    <Compile Include="Commands\Upgrade\Switches\IgnoreRememberedArguments.cs" />
+    <Compile Include="Commands\Upgrade\Switches\UsePackageExitCodes.cs" />
+    <Compile Include="Commands\Upgrade\Switches\DownloadChecksumX64.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ExitWhenRebootDetected.cs" />
+    <Compile Include="Commands\Upgrade\Switches\InstallArgumentsSensitive.cs" />
+    <Compile Include="Commands\Upgrade\Switches\FailOnUnfound.cs" />
+    <Compile Include="Commands\Upgrade\Switches\OnlyUpgradeInstalled.cs" />
+    <Compile Include="Commands\Upgrade\Switches\NoProgress.cs" />
+    <Compile Include="Commands\Upgrade\Switches\InstallIfNotInstalled.cs" />
+    <Compile Include="Commands\Upgrade\Switches\DownloadChecksum.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ExecutionTimeout.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Proxy.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ProxyUser.cs" />
+    <Compile Include="Commands\Upgrade\Switches\LogFile.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Source.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Version.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ProxyBypassList.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ProxyPassword.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ProxyBypassOnLocal.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Cert.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Prerelease.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Except.cs" />
+    <Compile Include="Commands\Upgrade\Switches\InstallDirectory.cs" />
+    <Compile Include="Commands\Upgrade\Switches\MaximumDownloadBitsPerSecond.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ExcludePrereleases.cs" />
+    <Compile Include="Commands\Upgrade\Switches\ForceX86.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Password.cs" />
+    <Compile Include="Commands\Upgrade\Switches\AcceptLicense.cs" />
+    <Compile Include="Commands\Upgrade\Switches\NoColor.cs" />
+    <Compile Include="Commands\Upgrade\Switches\WhatIf.cs" />
+    <Compile Include="Commands\Upgrade\Switches\LimitOutput.cs" />
+    <Compile Include="Commands\Upgrade\Switches\IgnoreDetectedReboot.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Confirm.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Force.cs" />
+    <Compile Include="Commands\Upgrade\Switches\NoReducePackageSize.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Help.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Trace.cs" />
+    <Compile Include="Commands\Upgrade\Switches\Verbose.cs" />
+    <Compile Include="Commands\Upgrade\UpgradeSwitch.cs" />
+    <Compile Include="Commands\VersionCommand.cs" />
+    <Compile Include="Commands\UnpackselfCommand.cs" />
+    <Compile Include="Commands\ApikeyCommand.cs" />
+    <Compile Include="Commands\SetapikeyCommand.cs" />
+    <Compile Include="Commands\FeaturesCommand.cs" />
+    <Compile Include="Commands\FeatureCommand.cs" />
+    <Compile Include="Commands\ConfigCommand.cs" />
+    <Compile Include="Commands\SourcesCommand.cs" />
+    <Compile Include="Commands\NewCommand.cs" />
+    <Compile Include="Commands\PushCommand.cs" />
+    <Compile Include="Commands\PackCommand.cs" />
+    <Compile Include="Commands\UninstallCommand.cs" />
+    <Compile Include="Commands\OutdatedCommand.cs" />
+    <Compile Include="Commands\PinCommand.cs" />
+    <Compile Include="Commands\InstallCommand.cs" />
+    <Compile Include="Commands\InfoCommand.cs" />
+    <Compile Include="Commands\SearchCommand.cs" />
+    <Compile Include="Commands\ListCommand.cs" />
+    <Compile Include="Commands\Upgrade\UpgradeCommand.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
